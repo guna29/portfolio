@@ -12,6 +12,8 @@ type Certification = {
   url: string;
   description: string;
   logo: string;
+  /** Fallback letter shown if logo fails to load */
+  logoFallback?: string;
   /** Tailwind classes for the branded top-bar gradient */
   brandBar: string;
   /** Tailwind classes for the subtle card background tint */
@@ -29,7 +31,8 @@ const certifications: Certification[] = [
     url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=D6E7676E2A49E0DC47E89DF8FB620DBC8DE1C3AAF8F18097DE768EF2809FBAC7",
     description:
       "Built and deployed agentic AI systems using LangChain, OpenAI Agents SDK, and real MCP servers on Oracle Cloud Infrastructure (OCI). Covered multi-agent orchestration, tool use, memory management, and enterprise AI deployment patterns.",
-    logo: "https://cdn.simpleicons.org/oracle/C74634",
+    logo: "/oracle-agentic-ai-badge.png",
+    logoFallback: "O",
     brandBar: "from-[#C74634] via-[#e05a47] to-[#C74634]",
     brandBg: "bg-[#C74634]/[0.06]",
     brandText: "text-[#e07060]",
@@ -103,7 +106,8 @@ const certifications: Certification[] = [
     url: "https://coursera.org/share/a31e29998006997a54cb2d4a27bd8776",
     description:
       "Completed Simplilearn's SRE foundations course — covering SLOs/SLAs/SLIs, error budgets, toil reduction, incident management, blameless postmortems, capacity planning, and the cultural and operational principles that underpin Site Reliability Engineering at scale. Scored 99.22%.",
-    logo: "https://cdn.simpleicons.org/simplilearn/FF6B35",
+    logo: "",
+    logoFallback: "S",
     brandBar: "from-[#FF6B35] via-[#ff8c5a] to-[#FF6B35]",
     brandBg: "bg-[#FF6B35]/[0.05]",
     brandText: "text-[#ff8c5a]",
@@ -130,12 +134,26 @@ const Certifications = () => {
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-start gap-4">
                     <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center overflow-hidden p-1.5">
-                      <img
-                        src={cert.logo}
-                        alt={cert.issuer}
-                        className="w-full h-full object-contain"
-                        loading="lazy"
-                      />
+                      {cert.logo ? (
+                        <img
+                          src={cert.logo}
+                          alt={cert.issuer}
+                          className="w-full h-full object-contain"
+                          loading="lazy"
+                          onError={(e) => {
+                            const target = e.currentTarget;
+                            target.style.display = "none";
+                            const fallback = target.nextElementSibling as HTMLElement | null;
+                            if (fallback) fallback.style.display = "flex";
+                          }}
+                        />
+                      ) : null}
+                      <span
+                        className="text-sm font-bold text-white"
+                        style={{ display: cert.logo ? "none" : "flex" }}
+                      >
+                        {cert.logoFallback ?? cert.issuer[0]}
+                      </span>
                     </div>
                     <div>
                       <p className={`text-xs font-semibold uppercase tracking-widest mb-1 ${cert.brandText}`}>

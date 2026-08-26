@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { CONTACT_INFO } from "@/config/contact";
 
@@ -23,13 +23,6 @@ const Contact = () => {
           <a href={emailHref} className="contact-card">
             <Mail className="w-5 h-5 text-gray-300" />
             <span>{CONTACT_INFO.email}</span>
-          </a>
-        </ScrollAnimation>
-
-        <ScrollAnimation>
-          <a href={`tel:${CONTACT_INFO.phone}`} className="contact-card">
-            <Phone className="w-5 h-5 text-gray-300" />
-            <span>{CONTACT_INFO.phone}</span>
           </a>
         </ScrollAnimation>
 
