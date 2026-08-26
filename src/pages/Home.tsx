@@ -88,23 +88,18 @@ const Home = () => {
         {/* ── About text ─────────────────────────────────────── */}
         <motion.div {...fadeUp(0.2)} className="mt-12">
           <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-5">About</h2>
-          <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+          <div className="space-y-3 text-gray-300 text-sm leading-relaxed">
             <p>
-              I&apos;m a software engineer focused on AI infrastructure, automation, and backend systems,
-              with a B.S. and M.S. in Computer Science from Arizona State University.
+              Software engineer focused on AI infrastructure, automation, and backend systems —
+              B.S. + M.S. CS from ASU, GPA 4.0.
             </p>
             <p>
-              Most recently I built a <span className="text-white font-medium">GPU cluster telemetry system</span> that
-              monitors hardware in real time, flags anomalies, and automatically remediates issues, backed
-              by Prometheus and Grafana. I also built{" "}
-              <span className="text-white font-medium">HireAgent</span>, an autonomous automation pipeline
-              that&apos;s processed 700+ real cases in production, and contributed a merged fix to{" "}
-              <span className="text-white font-medium">scikit-learn</span>.
-            </p>
-            <p>
-              At <span className="text-white font-medium">Velocity Tech</span> I built backend services in
-              FastAPI and PostgreSQL, cutting retrieval latency 45%. I&apos;m looking for roles where I can
-              keep building reliable AI infrastructure and automation at scale.
+              I&apos;ve built a <span className="text-white font-medium">GPU cluster telemetry system</span> with
+              real-time anomaly detection and auto-remediation (Prometheus + Grafana),{" "}
+              <span className="text-white font-medium">HireAgent</span> — an autonomous pipeline with 700+
+              production cases — and contributed a merged fix to{" "}
+              <span className="text-white font-medium">scikit-learn</span>. At Velocity Tech I built
+              FastAPI + PostgreSQL services that cut retrieval latency 45%.
             </p>
           </div>
         </motion.div>

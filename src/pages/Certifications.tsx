@@ -31,7 +31,7 @@ const certifications: Certification[] = [
     url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=D6E7676E2A49E0DC47E89DF8FB620DBC8DE1C3AAF8F18097DE768EF2809FBAC7",
     description:
       "Built and deployed agentic AI systems using LangChain, OpenAI Agents SDK, and real MCP servers on Oracle Cloud Infrastructure (OCI). Covered multi-agent orchestration, tool use, memory management, and enterprise AI deployment patterns.",
-    logo: "/oracle-agentic-ai-badge.png",
+    logo: "/oracle-logo.png",
     logoFallback: "O",
     brandBar: "from-[#C74634] via-[#e05a47] to-[#C74634]",
     brandBg: "bg-[#C74634]/[0.06]",
@@ -106,7 +106,7 @@ const certifications: Certification[] = [
     url: "https://coursera.org/share/a31e29998006997a54cb2d4a27bd8776",
     description:
       "Completed Simplilearn's SRE foundations course — covering SLOs/SLAs/SLIs, error budgets, toil reduction, incident management, blameless postmortems, capacity planning, and the cultural and operational principles that underpin Site Reliability Engineering at scale. Scored 99.22%.",
-    logo: "",
+    logo: "/simplilearn-logo.png",
     logoFallback: "S",
     brandBar: "from-[#FF6B35] via-[#ff8c5a] to-[#FF6B35]",
     brandBg: "bg-[#FF6B35]/[0.05]",
