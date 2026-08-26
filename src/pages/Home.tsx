@@ -31,8 +31,8 @@ const Home = () => {
                 Gunakarthik<br />Naidu Lanka
               </h1>
               <p className="mt-5 text-lg sm:text-xl text-gray-400 max-w-2xl leading-relaxed">
-                Software engineer focused on distributed systems and agentic AI. BS + MS CS @ ASU,
-                GPA 4.0. I build things end-to-end — from the idea to production.
+                Software engineer focused on AI infrastructure, automation, and backend systems.
+                BS + MS CS @ ASU, GPA 4.0. Python, FastAPI, GPU Systems.
               </p>
             </motion.div>
 
@@ -90,21 +90,21 @@ const Home = () => {
           <h2 className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-5">About</h2>
           <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
             <p>
-              At <span className="text-white font-medium">Velocity Tech (Zinio TalentHub)</span>, I
-              engineered high-concurrency microservices in FastAPI and Spring Boot for a hiring platform
-              serving 5,000+ monthly active users, built an NLP parsing engine that cut manual overhead
-              by 70%, and drove a 45% reduction in p99 database latency through PostgreSQL indexing and
-              schema refactoring.
+              I&apos;m a software engineer focused on AI infrastructure, automation, and backend systems,
+              with a B.S. and M.S. in Computer Science from Arizona State University.
             </p>
             <p>
-              At <span className="text-white font-medium">EPICS (Foster Arizona)</span>, I delivered a
-              real-time data sync layer with WebSockets and Redis, built React + Python REST API features
-              for a statewide resource directory, and resolved 20+ production-blocking bugs ahead of launch.
+              Most recently I built a <span className="text-white font-medium">GPU cluster telemetry system</span> that
+              monitors hardware in real time, flags anomalies, and automatically remediates issues, backed
+              by Prometheus and Grafana. I also built{" "}
+              <span className="text-white font-medium">HireAgent</span>, an autonomous automation pipeline
+              that&apos;s processed 700+ real cases in production, and contributed a merged fix to{" "}
+              <span className="text-white font-medium">scikit-learn</span>.
             </p>
             <p>
-              Outside of work I build local-first AI tools — autonomous browser agents, inference engines,
-              vehicle evaluation platforms — focused on data sovereignty. I also TA'd at ASU, mentoring
-              students in DSA, OOP, and software engineering.
+              At <span className="text-white font-medium">Velocity Tech</span> I built backend services in
+              FastAPI and PostgreSQL, cutting retrieval latency 45%. I&apos;m looking for roles where I can
+              keep building reliable AI infrastructure and automation at scale.
             </p>
           </div>
         </motion.div>
@@ -123,8 +123,8 @@ const Home = () => {
             <Cpu className="w-5 h-5 text-gray-400 mt-0.5 shrink-0" />
             <div>
               <p className="text-xs text-gray-500 uppercase tracking-wider">Focus</p>
-              <p className="mt-1.5 text-sm text-gray-100 font-medium">Distributed Systems</p>
-              <p className="text-xs text-gray-500 mt-0.5">Agentic AI · High-Performance Backends</p>
+              <p className="mt-1.5 text-sm text-gray-100 font-medium">AI Infrastructure</p>
+              <p className="text-xs text-gray-500 mt-0.5">Automation · GPU Systems · Backend</p>
             </div>
           </div>
           <div className="rounded-xl border border-white/10 bg-white/[0.03] p-5 flex gap-3 items-start">
